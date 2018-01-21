@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/root">
+
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent" android:id="@+id/whole">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:id="@+id/header" android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" android:layout_marginRight="10dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:text="Who&apos;s splitting the bill?"
+                android:id="@+id/textView33" android:textStyle="bold" android:layout_marginBottom="20dp"
+                android:layout_alignParentLeft="true" android:layout_marginLeft="0dp" android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp" />
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="   Add person   "
+                android:id="@+id/addPerson" android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
+                android:layout_alignParentTop="true" style="@style/CoolButton" />
+        </LinearLayout>
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+            android:id="@+id/scroller"
+            android:layout_above="@+id/footer"
+            android:layout_below="@+id/header"
+            android:layout_marginBottom="10dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:id="@+id/body">
+                <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/peopleTable"
+                    android:layout_marginTop="20dp" android:shrinkColumns="2" android:stretchColumns="2">
+                    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent" >
+                        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/checkBox2" android:layout_row="0"
+                            android:checked="true" android:layout_marginRight="10dp" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="50dp" android:id="@+id/imageView"
+                            android:src="@drawable/ic_launcher" android:layout_gravity="left|top" android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" android:layout_row="0" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium" android:text="Me sadsad sadsakdkasdk slkadk asd"
+                            android:id="@+id/textView" android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp" />
+                        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:id="@+id/imageButton" android:layout_row="0" android:src="@android:drawable/ic_delete" android:background="@null" />
+                    </TableRow>
+                    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent" >
+                        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:id="@+id/checkBox4" android:layout_row="0" android:checked="false"
+                            android:layout_marginRight="10dp" />
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:id="@+id/imageView20"
+                            android:src="@drawable/ic_launcher" android:layout_gravity="left|top"
+                            android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_row="0" />
+                        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="text"
+                            android:text="Charlie this is a really long senstence that" android:ems="10" android:id="@+id/editText" android:layout_row="0"
+                            android:layout_weight="0.2" />
+                        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:id="@+id/imageButton4" android:layout_row="0" android:src="@android:drawable/ic_delete" android:background="@null" />
+                    </TableRow>
+                    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent" >
+                        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:id="@+id/checkBox5" android:layout_row="0" android:checked="false"
+                            android:layout_marginRight="10dp" />
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:id="@+id/imageView21"
+                            android:src="@drawable/ic_launcher" android:layout_gravity="left|top"
+                            android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_row="0" />
+                        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="text"
+                            android:text="Person A" android:ems="10" android:id="@+id/editText2" android:layout_row="0"
+                            android:layout_weight="0.2" />
+                        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:id="@+id/imageButton5" android:layout_row="0" android:src="@android:drawable/ic_delete" android:background="@null" />
+                    </TableRow>
+                </TableLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="true" android:id="@+id/footer">
+            <!--<TextView android:id="@+id/apsAdView" android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"></TextView>-->
+
+            <com.google.android.gms.ads.doubleclick.PublisherAdView
+                android:id="@+id/apsAdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-6324812613709146/1542578717" android:layout_marginBottom="10dp"
+                android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:visibility="gone">
+            </com.google.android.gms.ads.doubleclick.PublisherAdView>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_marginLeft="10dp"
+                android:layout_alignParentTop="true" android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+                <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Back"
+                    android:id="@+id/addPeopleBack" android:layout_weight="0.5" style="@style/CoolButton"
+                    android:layout_marginRight="5dp" />
+                <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Next"
+                    android:id="@+id/addPeopleNext" android:layout_weight="0.5" style="@style/CoolButton"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

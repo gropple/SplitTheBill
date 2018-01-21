@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CoolButton">
+        <!--<item name="android:layout_width">fill_parent</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <item name="android:background">@drawable/flat_selector</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <!--<item name="android:typeface">monospace</item>-->
+    </style>
+
+    <style name="FormHeader">
+        <!--<item name="android:layout_width">fill_parent</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <item name="android:textColor">#FFFFFF</item>
+        <!--<item name="android:fontFamily">"sans-serif-light"</item>-->
+        <!--<item name="android:typeface">monospace</item>-->
+    </style>
+
+    <style name="WarningBox">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:background">@drawable/warning</item>-->
+        <!--<item name="android:textColor">#FFFFFF</item>-->
+        <!--<item name="android:fontFamily">"sans-serif-light"</item>-->
+        <!--<item name="android:typeface">monospace</item>-->
+    </style>
+
+    <style name="WarningBoxIcon">
+        <!--<item name="android:background">@drawable/warning</item>-->
+        <item name="android:tint">@color/warning_icon</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <!--<item name="android:textColor">#FFFFFF</item>-->
+        <!--<item name="android:fontFamily">"sans-serif-light"</item>-->
+        <!--<item name="android:typeface">monospace</item>-->
+    </style>
+
+    <style name="ClickableLink">
+        <item name="android:textColor">@color/clickable_link</item>
+        <!--<item name="android:drawableBottom">@drawable/dotted</item>-->
+
+        <!--<item name="android:textColor">#FFFFFF</item>-->
+        <!--<item name="android:fontFamily">"sans-serif-light"</item>-->
+        <!--<item name="android:typeface">monospace</item>-->
+    </style>
+
+</resources>
